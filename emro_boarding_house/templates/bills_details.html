@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Boarder Information
+{% endblock %}
+
+{% block content %}
+<p><a class='btn-back' href='/emro_boarding_house'>Back</a></p>
+
+<h1>Room {{ idboarder.room_number }} Bills</h1>
+
+<table>
+
+    <thead class="head">
+        
+        <tr>
+            <th scope='col'>Month&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th scope='col'>Due Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th scope='col'>Rent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th scope='col'>Electricity&nbsp;&nbsp;&nbsp;</th>
+            <th scope='col'>Water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th scope='col'>Status&nbsp;&nbsp;&nbsp;</th>
+
+   
+        </tr>
+    </thead>
+    <tbody>
+      {% for yy in mybills %}
+        <tr>
+        
+            <td>{{yy.month}}</td>
+            <td>{{yy.due_date}}</td>
+            <td>{{yy.rent}}</td>
+            <td>{{yy.electricity}}</td>
+            <td>{{yy.water}}</td>
+            <td>{{yy.status}}</td>
+
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+        

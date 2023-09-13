@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+
+{% block title %}
+Emro's Boarding House
+{% endblock %}
+
+{% block content %}
+    <div class="mycard">
+
+        <h1>Boarders</h1> 
+        <a class='btnbtn' href='/emro_boarding_house/roomt'>Room</a> 
+        <a class='btnbtn' href='/emro_boarding_house/bills'>Bills</a>
+        <br><br>
+        <ul>
+            {% for x in myboarders %}
+                
+                <li><a class='btn-none' href='details/{{x.id}}'><small>Room Number:</small><br> 
+                    {{ x.room_number }} </a></li>
+
+
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

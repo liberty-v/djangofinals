@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+
+{% load static %}
+
+{% block title %}
+    Djangofinals
+{% endblock %}
+{% block content %}
+
+<div class="main">
+
+
+        <img class='mainpic' src="{% static 'haus.png' %}">
+
+        <h1>Emro's Boarding House</h1>
+
+        <h3>This is a Django web application of the Emro's Boarding House</h3>
+        <p><a class='btn-very-special' href='/emro_boarding_house'>Boarders</a></p>
+
+        <p class="bottomnav">Made by <a href='https://github.com/liberty-v'>Liberty Vasquez</a></p>
+        
+
+</div>
+
+{% endblock %}

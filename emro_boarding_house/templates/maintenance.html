@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Maintenance
+{% endblock %}
+
+{% block content %}
+<br>
+<a class='btn-back' href='/emro_boarding_house/roomt'>Back</a>
+<h1>Maintenance details</h1>
+
+
+<table>
+    
+    <thead class="head-light">
+        
+        <tr>
+            <th scope='col'>Description</th>
+            <th scope='col'>Status</th>
+        
+        </tr>
+    </thead>
+    
+    <tbody>
+        {% for y in mymain %}
+
+        <tr>
+            <td>{{y.issue_desc}}</td>
+            <td>{{y.status}}</td>
+        
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

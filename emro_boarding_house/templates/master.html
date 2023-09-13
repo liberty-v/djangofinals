@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<div class="topnav">
+        
+    <img class='navpic' src="{% static 'haus.png' %}">
+    
+    <a href="/" class="ebh">Emro's Boarding House</a> |
+    <a href='/emro_boarding_house'>Boarders</a>
+    <a class='right' href='/admin'>Login</a>
+
+</div>
+
+<body>
+
+    {%block content %}
+    {% endblock %}
+
+</body>
+</html>

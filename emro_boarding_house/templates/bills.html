@@ -1,0 +1,37 @@
+{% extends "master.html" %}
+
+{% block title %}
+Bills
+{% endblock %}
+
+{% block content %}
+<p><a class='btn-back' href='/emro_boarding_house'>Back</a></p>
+
+
+<h1>Bills</h1> 
+
+<table>
+    {% for x in mybill %}
+    <thead class="head">
+
+        <tr>
+            <th scope='col'><small>Room Number: {{ x.boarder_id.room_number }}</small></th>
+            <th></th>
+            
+            <th scope='col'><a class='btn-simple' href='bills/{{x.boarder_id.id}}'>Details </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Month: {{x.month}}</td>
+            <td class='hidden'>asdasdsadas</td>
+            <td>{{x.status}}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+       

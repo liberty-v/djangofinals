@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Boarder Information
+{% endblock %}
+
+{% block content %}
+    <p><a href='/emro_boarding_house' class="btn-back">Back</a></p>
+    <h1>Boarder Room: {{myboarders.room_number}}</h1>
+
+    <table class=>
+        <thead class="head">
+            <tr>
+
+                <th scope='col'>First Name&nbsp;&nbsp;&nbsp;</th>
+                <th scope='col'>Last Name&nbsp;&nbsp;&nbsp;</th>
+                <th scope='col'>Contact Number&nbsp;&nbsp;&nbsp;</th>
+                <th scope='col'>Room Number&nbsp;&nbsp;&nbsp;</th>
+                <th scope='col'>Bills&nbsp;&nbsp;&nbsp;</th>
+                
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+            
+                <td>{{myboarders.first_name}}</td>
+                <td>{{myboarders.last_name}}</td>
+                <td>{{myboarders.contact_number}}</td>
+                <td>{{myboarders.room_number}}</td>
+                <td>
+                <a href='/emro_boarding_house/bills/{{myboarders.id}}'>Bills</a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+        

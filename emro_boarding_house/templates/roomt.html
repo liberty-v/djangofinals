@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Room Details
+{% endblock %}
+
+{% block content %}
+<p><a class='btn-back' href='/emro_boarding_house'>Back</a></p>
+
+<h1>Room Details</h1>
+
+<table>
+    
+    <thead class="head">
+        
+        <tr>
+            <th scope='col'>Room Number&nbsp;&nbsp;&nbsp;</th>
+            <th scope='col'>Monthly rent</th>
+            <th scope='col'>Status</th>
+            <th scope='col'></th>
+
+            
+        </tr>
+    </thead>
+    
+    <tbody>
+        {% for x in myroomt %}
+        <tr>
+        
+            <td>{{x.room_num}}</td>
+            <td>{{x.monthly_rent}}</td>
+            <td>{{x.availability}}</td>
+            
+            <td>&nbsp;&nbsp;&nbsp;
+            {% if x.availability == 'Under Maintenance'%}
+            <a href="/emro_boarding_house/roomt/maintenance/{{x.id}}">Details</a>
+            {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
